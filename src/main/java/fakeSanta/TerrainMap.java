@@ -12,7 +12,7 @@ public class TerrainMap {
 			for (int j = 0; j < map.length; j++) {
 				map[i][j] = new Tile();
 				map[i][j].display = "0";
-//				System.out.print(map[i][j] + "" + i + j +"]");
+				// System.out.print(map[i][j] + "" + i + j +"]");
 				// System.out.print(map[i][j].display+" ");
 			}
 			System.out.println();
@@ -43,24 +43,23 @@ public class TerrainMap {
 
 		map[tempX][tempY].display = "P";
 
-		map[tempX][tempY].setHasObject(true);
+		// map[tempX][tempY].setHasObject(true);
 
 	}
 
-	public void printMap() {
+	public String printMap() {
+		String text = "";
 		for (int i = 0; i < map.length; i++) {
 			for (int j = 0; j < map.length; j++) {
-
 				System.out.print(map[i][j].display + " ");
-
-				if (map[i][j].hasObject() == true) {
-					map[i][j].toString();
-				}
+				text = text + map[i][j].toString();
 
 			}
-			System.out.println();
-		}
 
+			System.out.println();
+			text = text + "\n";
+		}
+		return text;
 	}
 
 }

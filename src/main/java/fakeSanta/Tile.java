@@ -16,10 +16,9 @@ public class Tile {
 	}
 
 
-//	@Override
-//	public String toString() {
-//		
-//		return "[";
-//	}
+	@Override
+	public String toString() {	
+		return this.display;
+	}
 
 }
